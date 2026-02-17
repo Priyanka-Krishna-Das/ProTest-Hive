@@ -1,9 +1,15 @@
 package com.base;
 
+import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -24,6 +30,8 @@ public class BaseClass extends ProprtyClass{
 	
 	public static WebDriver driver;
 	LoginPage lp;
+	
+	String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	
 	@BeforeClass
 	@Parameters({"browser"})
@@ -76,6 +84,16 @@ public class BaseClass extends ProprtyClass{
 		//lp.clickLogout();
 		
 	}
+	
+	//Screen capture
+	public String captureScreen(String tname) throws IOException {
+	TakesScreenshot ts= (TakesScreenshot) driver;
+    File Source = ts.getScreenshotAs(OutputType.FILE);
+	File target = new File (System.getProperty("user.dir")+"/Screenshots/"+ tname+".png"+timeStamp);
+	FileUtils.copyFile(Source, target);
+	System.out.println("Screenshot Taken");
+	return tname;
+}
 	
 	
 	
