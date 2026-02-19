@@ -4,12 +4,11 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.test.TC_013_CreateWorkFile">
+      <class name="com.api.APITesting">
         <methods>
-          <include name="setDataInAtticSection"/>
-          <include name="setUp"/>
+          <include name="getProfileTest"/>
         </methods>
-      </class> <!-- com.test.TC_013_CreateWorkFile -->
+      </class> <!-- com.api.APITesting -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
