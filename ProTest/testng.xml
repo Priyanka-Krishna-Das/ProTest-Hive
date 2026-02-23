@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="All Test Suite">-->
+
+<!--    <parameter name="browser" value="chrome"></parameter>-->
+
+<!--    <test verbose="2" preserve-order="true"-->
+<!--          name="com.base.BaseClass">-->
+
+<!--        <classes>-->
+<!--            <class name="com.test.TC_00_TestingClass" />-->
+<!--        </classes>-->
+<!--</test>-->
+<!--</suite>-->
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<!--<listeners>-->
+<!--    <listener class-name="com.base.ExtendReport"/>-->
+<!--</listeners>-->
+
+<test thread-count="5" name="Test">
+<parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <!--<class name="com.test.TCTestingClass"/>-->
+      <!--<class name="com.test.TC_001_LoginTestClass"/>-->
+      <!--<class name="com.test.TC_002_APIDevToolsClass"/>-->
+      <!--<class name="com.test.TC_003_API_Data_CSV"/>-->
+      <!--<class name="com.test.TC_004_CreateTC"/>-->
+      <!--<class name="com.test.TC_005_CreateDelegate"/>-->
+      <!--<class name="com.test.TC_006_CreateConvOperation"/>-->
+      <!--<class name="com.test.TC_007_LoginAPI"/>-->
+      <!--<class name="com.rough.TestRough"/>-->
+      <!--<class name="com.test.TC_008_CreateBatch_Delegate"/>-->
+      <!--<class name="com.test.TC_009_CreateDeals"/>-->
+      <!--<class name="com.test.TC_010_CreateNewCollabReq_Delegate"/>-->
+      <!--<class name="com.test.TC_012_CreateLots_TC"/>-->
+      <!--<class name="com.test.TC_013_CreateWorkFile"/>-->
+      <class name="com.api.APITesting"/>
+      
+    </classes>
+  </test> 
+</suite>
