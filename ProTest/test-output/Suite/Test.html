@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 19 15:03:51 IST 2026</td>
+<td>Started on:</td><td>Wed Feb 25 13:59:43 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4613 ms)</td>
+<tr><td>Total time:</td><td>184 seconds (184855 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,273 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.setDataInAtticSection()'><b>setDataInAtticSection</b><br>Test class: com.test.TC_014_CalculationUsingExcel</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //span[contains(text(),&apos;Audit&apos;)]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:486)
+	at com.pom.TcDashboard.clickTabAudit(TcDashboard.java:945)
+	at com.test.TC_014_CalculationUsingExcel.setDataInAtticSection(TC_014_CalculationUsingExcel.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134681162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134681162'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //span[contains(text(),&apos;Audit&apos;)]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:486)
+	at com.pom.TcDashboard.clickTabAudit(TcDashboard.java:945)
+	at com.test.TC_014_CalculationUsingExcel.setDataInAtticSection(TC_014_CalculationUsingExcel.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.previsitForm()'><b>previsitForm</b><br>Test class: com.test.TC_014_CalculationUsingExcel<br>Parameters: 15, 9.4, 1.9, 6.7, 4.3, 110, 112, 220</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Call WaitForPendingNavigations only on the parent WebView
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [066819f38824d2915ea72c6cfd04adda, findElement {value=//button[contains(text(),&apos;Start Previsit&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 066819f38824d2915ea72c6cfd04adda
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.pom.TcDashboard.clickBtnStartPrevisit(TcDashboard.java:765)
+	at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace622609024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace622609024'><pre>org.openqa.selenium.WebDriverException: unknown error: Call WaitForPendingNavigations only on the parent WebView
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [066819f38824d2915ea72c6cfd04adda, findElement {value=//button[contains(text(),&apos;Start Previsit&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 066819f38824d2915ea72c6cfd04adda
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.pom.TcDashboard.clickBtnStartPrevisit(TcDashboard.java:765)
+	at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:89)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>66</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.previsitForm()'><b>previsitForm</b><br>Test class: com.test.TC_014_CalculationUsingExcel<br>Parameters: 12, 6.4, 3.1, 5.3, 4.3, 100, 123.11, 220</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [066819f38824d2915ea72c6cfd04adda, clickElement {id=f.4A904CC0129DBBDE4D12C283CF4D82B1.d.BC750669C58B24489AD466FEFCF4EACB.e.378}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (066819f38824d2915ea72c6cfd04adda)] -&gt; xpath: //span[contains(text(),&apos;Technical&apos;)]]
+Session ID: 066819f38824d2915ea72c6cfd04adda
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.pom.TcDashboard.clickTabTechnical(TcDashboard.java:758)
+	at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:88)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1899640261", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1899640261'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [066819f38824d2915ea72c6cfd04adda, clickElement {id=f.4A904CC0129DBBDE4D12C283CF4D82B1.d.BC750669C58B24489AD466FEFCF4EACB.e.378}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (066819f38824d2915ea72c6cfd04adda)] -&gt; xpath: //span[contains(text(),&apos;Technical&apos;)]]
+Session ID: 066819f38824d2915ea72c6cfd04adda
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at com.pom.TcDashboard.clickTabTechnical(TcDashboard.java:758)
+	at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +343,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.api.APITesting.getProfileTest()'><b>getProfileTest</b><br>Test class: com.api.APITesting</td>
+<td title='com.test.TC_014_CalculationUsingExcel.login()'><b>login</b><br>Test class: com.test.TC_014_CalculationUsingExcel</td>
 <td></td>
-<td>4</td>
-<td>com.api.APITesting@3fc2959f</td></tr>
+<td>6</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.createClientInformation()'><b>createClientInformation</b><br>Test class: com.test.TC_014_CalculationUsingExcel</td>
+<td></td>
+<td>39</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.previsitForm()'><b>previsitForm</b><br>Test class: com.test.TC_014_CalculationUsingExcel<br>Parameters: 11, 8.9, 2.4, 5.2, 5, 89.3, 100, 220</td>
+<td></td>
+<td>37</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
+<tr>
+<td title='com.test.TC_014_CalculationUsingExcel.createCustAppt()'><b>createCustAppt</b><br>Test class: com.test.TC_014_CalculationUsingExcel</td>
+<td></td>
+<td>10</td>
+<td>com.test.TC_014_CalculationUsingExcel@79d8407f</td></tr>
 </table><p>
 </body>
 </html>

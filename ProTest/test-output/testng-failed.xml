@@ -4,11 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.api.APITesting">
+      <class name="com.test.TC_014_CalculationUsingExcel">
         <methods>
-          <include name="getProfileTest"/>
+          <include name="previsitForm" invocation-numbers="1 2"/>
+          <include name="setUp"/>
+          <include name="setDataInAtticSection"/>
         </methods>
-      </class> <!-- com.api.APITesting -->
+      </class> <!-- com.test.TC_014_CalculationUsingExcel -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

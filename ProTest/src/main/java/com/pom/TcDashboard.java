@@ -3,6 +3,7 @@ package com.pom;
 import java.time.Duration;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -514,7 +515,10 @@ public class TcDashboard {
 
 		 public void clickDropdownSelectLead()
 		 {
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			 js.executeScript("arguments[0].scrollIntoView(true);", dropdownSelectLead);
 			 dropdownSelectLead.click();
+			// dropdownSelectLead.click();
 		 }
 		 
 
@@ -528,24 +532,48 @@ public class TcDashboard {
 
 		 public void clickBtnNext1()
 		 {
-			 btnNext1.click();
+			 //btnNext1.click();
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			 js.executeScript("arguments[0].click();", btnNext1);
 		 }
 		 
 
-		 public void clickDropDownValoPartner(String valoPartner)
+		 public void clickDropDownValoPartner(String valoPartner) throws InterruptedException
 		 {
-			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				/*
+				 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				 * 
+				 * wait.until(ExpectedConditions.elementToBeClickable(dropDownValoPartner));
+				 * 
+				 * Actions act = new Actions(driver); act.moveToElement(dropDownValoPartner)
+				 * .click() .sendKeys(valoPartner) .sendKeys(Keys.DOWN) .sendKeys(Keys.ENTER)
+				 * .build() .perform();
+				 */
+			 
+			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-			 wait.until(ExpectedConditions.elementToBeClickable(dropDownValoPartner));
+			    WebElement dropdown = wait.until(
+			            ExpectedConditions.elementToBeClickable(dropDownValoPartner));
 
-			 Actions act = new Actions(driver);
-			 act.moveToElement(dropDownValoPartner)
-			    .click()
-			    .sendKeys(valoPartner)
-			    .sendKeys(Keys.DOWN)
-			    .sendKeys(Keys.ENTER)
-			    .build()
-			    .perform();
+			    // 1️⃣ Click dropdown
+			    dropdown.click();
+
+			    // 2️⃣ Wait small time for panel to open
+			    try {
+			        Thread.sleep(1000);
+			    } catch (InterruptedException e) {
+			        e.printStackTrace();
+			    }
+
+			    // 3️⃣ Send keys to ACTIVE element (important change)
+			    WebElement activeElement = driver.switchTo().activeElement();
+
+			    activeElement.sendKeys(valoPartner);
+
+			    Thread.sleep(1000);
+
+			    activeElement.sendKeys(Keys.DOWN);
+			    activeElement.sendKeys(Keys.ENTER);
 		 }
 		 
 		 
@@ -749,9 +777,24 @@ public class TcDashboard {
 		 public void clickDropdownAtticType()
 		 {
 			 //dropdownAtticType.click();
-			 WebElement refreshedElement = wait.until(ExpectedConditions.refreshed(
-				        ExpectedConditions.elementToBeClickable(dropdownAtticType)));
-				refreshedElement.click();
+//			 WebElement refreshedElement = wait.until(ExpectedConditions.refreshed(
+//				        ExpectedConditions.elementToBeClickable(dropdownAtticType)));
+//				refreshedElement.click();
+			 
+			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+			    for (int i = 0; i < 2; i++) {
+			        try {
+			            WebElement refreshedElement = wait.until(
+			                    ExpectedConditions.elementToBeClickable(dropdownAtticType));
+
+			            refreshedElement.click();
+			            break;  // exit loop if success
+			        } 
+			        catch (StaleElementReferenceException e) {
+			            System.out.println("Stale element, retrying...");
+			        }
+			    }
 		 }
 		 
 

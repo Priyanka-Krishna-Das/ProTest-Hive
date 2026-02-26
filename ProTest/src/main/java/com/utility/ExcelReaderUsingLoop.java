@@ -57,5 +57,13 @@ public class ExcelReaderUsingLoop {
     	System.out.println("=== DATA PROVIDER START ===");
         return ExcelReaderUsingLoop.getLoginData(System.getProperty("user.dir") + "\\src\\main\\java\\com\\utility\\HiveExcelLogin.xlsx");
     }
+    
+    
+ // Simple DataProvider that reads from Excel
+    @DataProvider(name = "calculation")
+    public Object[][] getCalculation() {
+    	System.out.println("=== DATA PROVIDER START ===");
+        return ExcelReaderUsingLoop.getLoginData(System.getProperty("user.dir") + "\\src\\main\\java\\com\\utility\\HiveExcelLogin.xlsx");
+    }
 
 }

@@ -31,7 +31,7 @@ public class TC_001_LoginTestClass extends BaseClass{
 	}
 	
 	//Through excel loop - "Class name- ExcelReaderUsingLoop"
-	//@Test(dataProvider = "loginData",dataProviderClass = ExcelReaderUsingLoop.class)
+  //@Test(dataProvider = "loginData",dataProviderClass = ExcelReaderUsingLoop.class)
 		public void TC_001_LoginTest_AdminUsingExcelLoop(String username, String password) throws InterruptedException
 		{
 		if (username == null) {

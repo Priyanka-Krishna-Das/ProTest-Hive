@@ -38,7 +38,8 @@
       <!--<class name="com.test.TC_010_CreateNewCollabReq_Delegate"/>-->
       <!--<class name="com.test.TC_012_CreateLots_TC"/>-->
       <!--<class name="com.test.TC_013_CreateWorkFile"/>-->
-      <class name="com.api.APITesting"/>
+      <!--<class name="com.api.APITesting"/>-->
+      <class name="com.test.TC_014_CalculationUsingExcel"/>
       
     </classes>
   </test> 
