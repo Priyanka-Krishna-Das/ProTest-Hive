@@ -30,6 +30,7 @@ public class TC_011_CreateTechnician extends BaseClass{
 		delegate.clickSelectEngLang();
 		delegate.clickSectionMyPartner();
 		delegate.clickBtnNewCollabReq();
+		System.out.println("-------");
 	}
 
 }
