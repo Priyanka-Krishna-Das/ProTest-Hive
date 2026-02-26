@@ -324,6 +324,7 @@ public class TcDashboard {
 	     wait.until(ExpectedConditions.elementToBeClickable(dropdownChangeLang));
 	     ((JavascriptExecutor) driver)
 	        .executeScript("arguments[0].click();", dropdownChangeLang);
+	     System.out.println("the -----");
 	 }
 	 
 	 public void clickSelectEng()
