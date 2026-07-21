@@ -1,5 +1,6 @@
 package com.test;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
@@ -13,130 +14,146 @@ public class TC_014_CalculationUsingExcel extends BaseClass{
 	TcDashboard td;
 	
 	//Login
-	@Test(priority = 1)
-	public void login() throws InterruptedException
-	{
-		bc = new BaseClass();
-		bc.LoginPage();
-	}
+		@Test(priority = 1)
+		public void login() throws InterruptedException
+		{
+			bc = new BaseClass();
+			bc.LoginPage();
+		}
 	
 	
     //Create Client Info
 	@Test(priority = 2)
-	public void createClientInformation() throws InterruptedException
+	public void createWorkfile() throws InterruptedException
 	{
-		
-		td = new TcDashboard(driver);
-		td.clickDropdownChangeLang();
-		td.clickSelectEng();
-		td.clickSectionMyClients();
-		td.clickSectionMyWorkFile();
-		td.clickBtnCreateAWorkFile();
-		Thread.sleep(2000);
-		td.clickDropdownSelectLead();
-		td.clickSelectLeadFromDropDown();
-		Thread.sleep(3000);
-		td.clickBtnNext1();
-		td.clickDropDownValoPartner("DelegateDocTest");
-		td.clickDropdownConvOpe();
-		td.clickSelectConvOpeFromDropDown();
-		td.clickDropDownCAEDeals();
-		td.clickSelectCAEDeals();
-		td.clickDropdownSelectlot();
-		td.clickSelectLots();
-		td.clickBtnNext2();
-		td.clickDropDwonSelctOpeServices();
-		td.clickDropDwonDesignOffice();
-		td.clickSelctDesignOffice();
-		td.clickBtnConfirm();
-		Thread.sleep(3000);
-		
-		
-	}
-	
-	//Create Client Appt.
-		@Test(priority = 3)
-		public void createCustAppt() throws InterruptedException
-		{
-			
-			td = new TcDashboard(driver);
-			td.clickTabClientAppt();
-			td.clickBtnCreateAppt();
-			td.clickDropDownApptType();
-			td.clickSelectApptType();
-			td.clickSelectTypeOfPrevisit();
-			td.clickDropDownTechnicianName();
-			td.clickSelectTechni();
-			td.enterTxtDate("06022026");
-			td.clickDropDwonHours("15:15");
-			td.clickBtnSaveClientAppt();
-		}
+		 td = new TcDashboard(driver);
 
-		// //WorkFile -> Tab technical -> previsit
-		@Test(priority = 4, dataProvider = "calculation", dataProviderClass = ExcelReaderUsingLoopCalculation.class)
-			public void previsitForm(
-			        String flooreThickness,
-			        String atticLength,
-			        String atticWidth,
-			        String internalRidgeHeight,
-			        String halfSpan,
-			        String surfaceToInsulate,
-			        String totalSurface,
-			        String reccomenedThickness) throws InterruptedException {
-			
-			td = new TcDashboard(driver);
-			td.clickTabTechnical();
+		    // ===== CREATE WORK FILE =====
+		 
+		    td.clickDropdownChangeLang(); 
+		    td.clickSelectEng();
+		    td.clickSectionMyClients();
+		    td.clickSectionMyWorkFile();
+		    td.clickBtnCreateAWorkFile();
+		    Thread.sleep(2000);
+		    td.clickDropdownSelectLead();
+		    td.clickSelectLeadFromDropDown();
+		    td.clickBtnNext1();
+		    td.clickDropDownValoPartner("DelegateDocTest");
+		    td.clickDropdownConvOpe();
+		    td.clickSelectConvOpeFromDropDown();
+		    td.clickDropDownCAEDeals();
+		    td.clickSelectCAEDeals();
+		    td.clickDropdownSelectlot();
+		    td.clickSelectLots();
+		    td.clickBtnNext2();
+		    td.clickDropDwonSelctOpeServices();
+		    td.clickDropDwonDesignOffice();
+		    td.clickSelctDesignOffice();
+		    td.clickBtnConfirm();
+		    
+		 // ===== CREATE APPOINTMENT =====
+		    td.clickTabClientAppt();
+		    Thread.sleep(10);
+		    td.clickBtnCreateAppt();
+		    td.clickDropDownApptType();
+		    td.clickSelectApptType();
+		    td.clickSelectTypeOfPrevisit();
+		    td.clickDropDownTechnicianName();
+		    td.clickSelectTechni();
+		    td.enterTxtDate("06022026");
+		    td.clickDropDwonHours("15:15");
+		    td.clickBtnSaveClientAppt();
+	}
+	@Test(dataProvider = "calculation",
+		      dataProviderClass = ExcelReaderUsingLoopCalculation.class, priority = 3)
+		public void completeWorkFlow(
+		        String atticWidthL,
+		        String atticWidthL1,
+		        String atticWidthL2,
+		        String atticWidthL3,
+		        String h,
+		        String h1,
+		        String h2,
+		        String floorThickness,
+		        String totalSurface,
+		        String totalSurface1,
+		        String totalSurface2,
+		        String surfaceToInsulate,
+		        String insulationThicknessToInstall) throws InterruptedException {
+		    
+		    td = new TcDashboard(driver);
+
+		    Thread.sleep(8000);
+
+//		    // ===== PREVISIT (Excel Data) =====
+//		    td.clickTabTechnical();
+//		    td.clickBtnStartPrevisit();
+//		    td.clickBtnAttic();
+//		    td.enterTxtFlooreThickness(flooreThickness);
+//		    td.enterTxtAtticLength(atticLength);
+//		    td.enterTxtAtticWidth(atticWidth);
+//		    td.enterTxtInternalRidgeHeight(internalRidgeHeight);
+//		    td.enterTxtHalfSpan(halfSpan);
+//		    td.enterTxtSurfaceToInsulate(surfaceToInsulate);
+//		    td.enterTxtTotalSurface(totalSurface);
+//		    td.enterTxtReccomenedThickness(reccomenedThickness);
+//		    td.clickBtnNextAttic();
+
+		 // ===== PREVISIT (Excel Data) =====
+		    System.out.println("Click on technical tab");
+		    td.clickTabTechnical();
 			td.clickBtnStartPrevisit();
 			td.clickBtnAttic();
-			//td.clickBtnAttic();
-			td.clickDropdownAtticType();
-			td.clickSelectAtticType();
+		    td.enterTxtAtticWidthL(atticWidthL);
+			td.enterTxtAtticWidthL1(atticWidthL1);
+			td.enterTxtAtticWidthL2(atticWidthL2);
+			td.enterTxtAtticWidthL3(atticWidthL3);
+			td.enterTxtH(h);
+			td.enterTxtH1(h1);
+			td.enterTxtH2(h2);
+			td.clickDropDownAtticType();
 			td.clickDropDownAccessType();
-			td.clickSelectAccessType();
-			td.clickDropDownFloorType();
+			td.clickBtnEditFloorType();
 			td.clickSelectFloorType();
-			td.enterTxtFlooreThickness(flooreThickness);
-			td.clickDropDownInsulationType();
-			td.clickSelectIsulationType();
-			td.clickDropDownVentilation();
-			td.clickSelectVentilation();
-			td.enterTxtAtticLength(atticLength);
-			td.enterTxtAtticWidth(atticWidth);
-			td.enterTxtInternalRidgeHeight(internalRidgeHeight);
-			td.enterTxtHalfSpan(halfSpan);
-			td.enterTxtSurfaceToInsulate(surfaceToInsulate);
-			td.enterTxtTotalSurface(totalSurface);
-			td.clickDropDownRecommendedMaterial();
-			td.enterTxtReccomenedThickness(reccomenedThickness);
+			td.enterTxtFloorThickness(floorThickness);
+			td.clickBtnAddFloorType();
+			td.clickBtnCross();
+			td.enterTxttotalSurface("5");
+			td.enterTxttotalSurface1("89.3");
+			td.enterTxttotalSurface2("100");
+			td.enterTxtSurfaceToInsulate("130");
+			td.clickDropDownSelectInsulationType();
+			td.clickDropDownSelectVentilation();
+			//material
+			td.clickDropDownSelectMaterialToInstall();
+			td.enterTxtInsulationThicknessToInstall("100");
+			//Roof slope
 			td.clickDropDownRampantsTypes();
 			td.clickDropDownRampantsTypes();
 			td.clickDropDownAirLeaks();
 			td.clickBtnNextAttic();
-			
-		}
-		
-		
-		//Audit
-		@Test(priority = 5)
-		public void setDataInAtticSection() throws InterruptedException
-		{
-			
-			td = new TcDashboard(driver);
+		    
+		    // ===== AUDIT =====
 			td.clickTabAudit();
 			td.clickDropDownManufacturer();
-			td.clickSelectManufacturer();
+			//td.clickSelectManufacturer();
 			td.clickDropDownReference();
-			td.clickSelectReference();
+			//td.clickSelectReference();
 			Thread.sleep(2000);
-			//td.dispTxtAETotal();
+			td.dispTxtAETotal();
 			td.clickBtnAuditConfirm();
-			Thread.sleep(2000);
-			td.clickTabAudit1();
-			//td.dispTxtAETotal();
-			Thread.sleep(2000);
-			td.clickBtnView();
-			Thread.sleep(2000);
-			td.clickTxtAETotalAfterView();
+			Thread.sleep(3000);
+			td.clickTabAudit();
+			
+			
+			//old
+//		    td.clickTabAudit();
+//		    td.clickDropDownManufacturer();
+//		    //td.clickSelectManufacturer();
+//		    td.clickDropDownReference();
+//		    //td.clickSelectReference();
+//		    td.clickBtnAuditConfirm();
 		}
 
 }

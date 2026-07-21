@@ -36,10 +36,10 @@ public class AdminDashboard {
 	 @FindBy(xpath = "//*[@class='MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-qiwgdb']")
 	 private WebElement dropdownChangeLang;
 	 
-	 @FindBy(xpath = "//*[contains(text(),'Anglais')]")
+	 @FindBy(xpath = "//*[contains(text(),'English')]")
 	 private WebElement selectEng;
 	 
-	 @FindBy(xpath = "//*[contains(text(),'Forms/Proc...')]")
+	 @FindBy(xpath = "//*[contains(text(),'Forms/Proc')]")
 	 private WebElement processAdmin;
 	
 	 @FindBy(xpath = "//*[text()='Clients']")

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-25T13:59:43 IST" name="Suite" finished-at="2026-02-25T14:02:47 IST" duration-ms="184855">
+  <suite started-at="2026-07-21T13:33:06 IST" name="Suite" finished-at="2026-07-21T13:34:32 IST" duration-ms="85295">
     <groups>
     </groups>
-    <test started-at="2026-02-25T13:59:43 IST" name="Test" finished-at="2026-02-25T14:02:47 IST" duration-ms="184855">
+    <test started-at="2026-07-21T13:33:06 IST" name="Test" finished-at="2026-07-21T13:34:32 IST" duration-ms="85295">
       <class name="com.test.TC_014_CalculationUsingExcel">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T13:59:43 IST" name="setUp" finished-at="2026-02-25T13:59:59 IST" duration-ms="15998" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:06 IST" name="setUp" finished-at="2026-07-21T13:33:09 IST" duration-ms="2982" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,65 +18,86 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:1, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T13:59:59 IST" name="login" finished-at="2026-02-25T14:00:06 IST" duration-ms="6919" status="PASS">
+        <test-method signature="login()[pri:1, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:09 IST" name="login" finished-at="2026-07-21T13:33:12 IST" duration-ms="2771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createClientInformation()[pri:2, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:00:06 IST" name="createClientInformation" finished-at="2026-02-25T14:00:46 IST" duration-ms="39918" status="PASS">
+        <test-method signature="createWorkfile()[pri:2, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:12 IST" name="createWorkfile" finished-at="2026-07-21T13:33:37 IST" duration-ms="24395" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createClientInformation -->
-        <test-method signature="createCustAppt()[pri:3, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:00:46 IST" name="createCustAppt" finished-at="2026-02-25T14:00:56 IST" duration-ms="10816" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createCustAppt -->
-        <test-method signature="previsitForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:01:02 IST" name="previsitForm" data-provider="calculation" finished-at="2026-02-25T14:01:39 IST" duration-ms="37016" status="PASS">
+        </test-method> <!-- createWorkfile -->
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:38 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:02 IST" duration-ms="23193" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[11]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[8.9]]>
+                <![CDATA[3.5]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[2.4]]>
+                <![CDATA[3.6]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[5.2]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[89.3]]>
+                <![CDATA[8]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[100]]>
+                <![CDATA[11]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[220]]>
+                <![CDATA[8.9]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[89.3]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[130]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[100]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- previsitForm -->
-        <test-method signature="previsitForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:01:39 IST" name="previsitForm" data-provider="calculation" finished-at="2026-02-25T14:01:41 IST" duration-ms="1702" status="FAIL">
+        </test-method> <!-- completeWorkFlow -->
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:34:02 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:13 IST" duration-ms="11792" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -118,31 +139,56 @@
                 <![CDATA[220]]>
               </value>
             </param>
+            <param index="8">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[77]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[34]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
           </params>
           <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
               <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=144.0.7559.133)
+  (Session info: chrome=150.0.7871.127)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [066819f38824d2915ea72c6cfd04adda, clickElement {id=f.4A904CC0129DBBDE4D12C283CF4D82B1.d.BC750669C58B24489AD466FEFCF4EACB.e.378}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (066819f38824d2915ea72c6cfd04adda)] -> xpath: //span[contains(text(),'Technical')]]
-Session ID: 066819f38824d2915ea72c6cfd04adda]]>
+Command: [cde4b86f73c371b0f2e9276eb9bc1286, sendKeysToElement {value=[Ljava.lang.CharSequence;@580902cd, id=f.A57A1BF2D3F13DB59CDFE29C26CDD495.d.FDCB668F5B6CE11C522AF0040C7E09F3.e.1108}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cde4b86f73c371b0f2e9276eb9bc1286)] -> xpath: (//input[contains(@name,'attic.atticHalfSpanHorizontal')])[1]]
+Session ID: cde4b86f73c371b0f2e9276eb9bc1286]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=144.0.7559.133)
+  (Session info: chrome=150.0.7871.127)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [066819f38824d2915ea72c6cfd04adda, clickElement {id=f.4A904CC0129DBBDE4D12C283CF4D82B1.d.BC750669C58B24489AD466FEFCF4EACB.e.378}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (066819f38824d2915ea72c6cfd04adda)] -> xpath: //span[contains(text(),'Technical')]]
-Session ID: 066819f38824d2915ea72c6cfd04adda
+Command: [cde4b86f73c371b0f2e9276eb9bc1286, sendKeysToElement {value=[Ljava.lang.CharSequence;@580902cd, id=f.A57A1BF2D3F13DB59CDFE29C26CDD495.d.FDCB668F5B6CE11C522AF0040C7E09F3.e.1108}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cde4b86f73c371b0f2e9276eb9bc1286)] -> xpath: (//input[contains(@name,'attic.atticHalfSpanHorizontal')])[1]]
+Session ID: cde4b86f73c371b0f2e9276eb9bc1286
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -156,14 +202,14 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at com.pom.TcDashboard.clickTabTechnical(TcDashboard.java:758)
-at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:88)
+at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
+at com.pom.TcDashboard.enterTxtAtticWidthL1(TcDashboard.java:1006)
+at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:109)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -197,8 +243,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- previsitForm -->
-        <test-method signature="previsitForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:01:41 IST" name="previsitForm" data-provider="calculation" finished-at="2026-02-25T14:02:47 IST" duration-ms="66052" status="FAIL">
+        </test-method> <!-- completeWorkFlow -->
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:34:13 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:32 IST" duration-ms="18228" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -240,27 +286,54 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[220]]>
               </value>
             </param>
+            <param index="8">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[56]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[86]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[120]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[110]]>
+              </value>
+            </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[unknown error: Call WaitForPendingNavigations only on the parent WebView
-  (Session info: chrome=144.0.7559.133)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Start Previsit')]"}
+  (Session info: chrome=150.0.7871.127)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [066819f38824d2915ea72c6cfd04adda, findElement {value=//button[contains(text(),'Start Previsit')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 066819f38824d2915ea72c6cfd04adda]]>
+Command: [cde4b86f73c371b0f2e9276eb9bc1286, findElement {using=xpath, value=//button[contains(text(),'Start Previsit')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cde4b86f73c371b0f2e9276eb9bc1286]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Call WaitForPendingNavigations only on the parent WebView
-  (Session info: chrome=144.0.7559.133)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Start Previsit')]"}
+  (Session info: chrome=150.0.7871.127)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [066819f38824d2915ea72c6cfd04adda, findElement {value=//button[contains(text(),'Start Previsit')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65273}, goog:processID: 46888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65273/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 066819f38824d2915ea72c6cfd04adda
+Command: [cde4b86f73c371b0f2e9276eb9bc1286, findElement {using=xpath, value=//button[contains(text(),'Start Previsit')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cde4b86f73c371b0f2e9276eb9bc1286
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -280,75 +353,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at com.pom.TcDashboard.clickBtnStartPrevisit(TcDashboard.java:765)
-at com.test.TC_014_CalculationUsingExcel.previsitForm(TC_014_CalculationUsingExcel.java:89)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- previsitForm -->
-        <test-method signature="setDataInAtticSection()[pri:5, instance:com.test.TC_014_CalculationUsingExcel@79d8407f]" started-at="2026-02-25T14:02:47 IST" name="setDataInAtticSection" finished-at="2026-02-25T14:02:47 IST" duration-ms="62" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with locator By.xpath: //span[contains(text(),'Audit')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //span[contains(text(),'Audit')]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:486)
-at com.pom.TcDashboard.clickTabAudit(TcDashboard.java:945)
-at com.test.TC_014_CalculationUsingExcel.setDataInAtticSection(TC_014_CalculationUsingExcel.java:125)
+at com.pom.TcDashboard.clickBtnStartPrevisit(TcDashboard.java:853)
+at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:106)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -382,7 +388,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setDataInAtticSection -->
+        </test-method> <!-- completeWorkFlow -->
       </class> <!-- com.test.TC_014_CalculationUsingExcel -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

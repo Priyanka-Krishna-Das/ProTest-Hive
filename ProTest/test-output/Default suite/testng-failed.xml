@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.TC_007_LoginAPI">
+      <class name="com.test.TC_014_CalculationUsingExcel">
         <methods>
+          <include name="login"/>
+          <include name="completeWorkFlow"/>
           <include name="setUp"/>
-          <include name="main"/>
         </methods>
-      </class> <!-- com.test.TC_007_LoginAPI -->
+      </class> <!-- com.test.TC_014_CalculationUsingExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

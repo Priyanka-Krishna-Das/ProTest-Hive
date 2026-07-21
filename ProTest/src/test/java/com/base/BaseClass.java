@@ -66,7 +66,7 @@ public class BaseClass extends ProprtyClass{
         System.out.println("URL launch");
         //driver.get("http://101.53.145.125:3030/home");
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         //return driver;
         

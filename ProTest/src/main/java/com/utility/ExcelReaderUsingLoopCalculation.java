@@ -29,24 +29,34 @@ public class ExcelReaderUsingLoopCalculation {
                 Row row = sheet.getRow(i);
                 if (row == null) continue;
 
-                String flooreThickness = formatter.formatCellValue(row.getCell(0));
-                String atticLength = formatter.formatCellValue(row.getCell(1));
-                String atticWidth = formatter.formatCellValue(row.getCell(2));
-                String internalRidgeHeight = formatter.formatCellValue(row.getCell(3));
-                String halfSpan = formatter.formatCellValue(row.getCell(4));
-                String surfaceToInsulate = formatter.formatCellValue(row.getCell(5));
-                String totalSurface = formatter.formatCellValue(row.getCell(6));
-                String reccomenedThickness = formatter.formatCellValue(row.getCell(7));
+                String atticWidthL = formatter.formatCellValue(row.getCell(0));
+                String atticWidthL1 = formatter.formatCellValue(row.getCell(1));
+                String atticWidthL2 = formatter.formatCellValue(row.getCell(2));
+                String atticWidthL3 = formatter.formatCellValue(row.getCell(3));
+                String h = formatter.formatCellValue(row.getCell(4));
+                String h1 = formatter.formatCellValue(row.getCell(5));
+                String h2 = formatter.formatCellValue(row.getCell(6));
+                String floorThickness = formatter.formatCellValue(row.getCell(7));
+                String totalSurface = formatter.formatCellValue(row.getCell(8));
+                String totalSurface1 = formatter.formatCellValue(row.getCell(9));
+                String totalSurface2 = formatter.formatCellValue(row.getCell(10));
+                String surfaceToInsulate = formatter.formatCellValue(row.getCell(11));
+                String insulationThicknessToInstall = formatter.formatCellValue(row.getCell(12));
 
-                data.add(new Object[]{
-                        flooreThickness,
-                        atticLength,
-                        atticWidth,
-                        internalRidgeHeight,
-                        halfSpan,
-                        surfaceToInsulate,
+                data.add(new Object[] {
+                        atticWidthL,
+                        atticWidthL1,
+                        atticWidthL2,
+                        atticWidthL3,
+                        h,
+                        h1,
+                        h2,
+                        floorThickness,
                         totalSurface,
-                        reccomenedThickness
+                        totalSurface1,
+                        totalSurface2,
+                        surfaceToInsulate,
+                        insulationThicknessToInstall
                 });
             }
 

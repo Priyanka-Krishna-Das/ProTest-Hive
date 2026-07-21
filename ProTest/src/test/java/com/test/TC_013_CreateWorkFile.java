@@ -73,30 +73,65 @@ public class TC_013_CreateWorkFile extends BaseClass{
 		public void previsitForm() throws InterruptedException
 		{
 			
+//			td = new TcDashboard(driver);
+//			td.clickTabTechnical();
+//			td.clickBtnStartPrevisit();
+//			td.clickBtnAttic();
+//			//td.clickBtnAttic();
+//			td.clickDropdownAtticType();
+//			td.clickSelectAtticType();
+//			td.clickDropDownAccessType();
+//			td.clickSelectAccessType();
+//			td.clickDropDownFloorType();
+//			td.clickSelectFloorType();
+//			td.enterTxtFlooreThickness("11");
+//			td.clickDropDownInsulationType();
+//			td.clickSelectIsulationType();
+//			td.clickDropDownVentilation();
+//			td.clickSelectVentilation();
+//			td.enterTxtAtticLength("8.9");
+//			td.enterTxtAtticWidth("2.4");
+//			td.enterTxtInternalRidgeHeight("5.2");
+//			td.enterTxtHalfSpan("5");
+//			td.enterTxtSurfaceToInsulate("89.3");
+//			td.enterTxtTotalSurface("100");
+//			td.clickDropDownRecommendedMaterial();
+//			td.enterTxtReccomenedThickness("220");
+//			td.clickDropDownRampantsTypes();
+//			td.clickDropDownRampantsTypes();
+//			td.clickDropDownAirLeaks();
+//			td.clickBtnNextAttic();
+			
 			td = new TcDashboard(driver);
 			td.clickTabTechnical();
 			td.clickBtnStartPrevisit();
 			td.clickBtnAttic();
 			//td.clickBtnAttic();
-			td.clickDropdownAtticType();
-			td.clickSelectAtticType();
+			Thread.sleep(3000);
+			td.enterTxtAtticWidthL("10");
+			td.enterTxtAtticWidthL1("3.5");
+			td.enterTxtAtticWidthL2("3.6");
+			td.enterTxtAtticWidthL3("0");
+			td.enterTxtH("10");
+			td.enterTxtH1("8");
+			td.enterTxtH2("11");
+			td.clickDropDownAtticType();
 			td.clickDropDownAccessType();
-			td.clickSelectAccessType();
-			td.clickDropDownFloorType();
+			td.clickBtnEditFloorType();
 			td.clickSelectFloorType();
-			td.enterTxtFlooreThickness("11");
-			td.clickDropDownInsulationType();
-			td.clickSelectIsulationType();
-			td.clickDropDownVentilation();
-			td.clickSelectVentilation();
-			td.enterTxtAtticLength("8.9");
-			td.enterTxtAtticWidth("2.4");
-			td.enterTxtInternalRidgeHeight("5.2");
-			td.enterTxtHalfSpan("5");
-			td.enterTxtSurfaceToInsulate("89.3");
-			td.enterTxtTotalSurface("100");
-			td.clickDropDownRecommendedMaterial();
-			td.enterTxtReccomenedThickness("220");
+			td.enterTxtFloorThickness("8.9");
+			td.clickBtnAddFloorType();
+			td.clickBtnCross();
+			td.enterTxttotalSurface("5");
+			td.enterTxttotalSurface1("89.3");
+			td.enterTxttotalSurface2("100");
+			td.enterTxtSurfaceToInsulate("130");
+			td.clickDropDownSelectInsulationType();
+			td.clickDropDownSelectVentilation();
+			//material
+			td.clickDropDownSelectMaterialToInstall();
+			td.enterTxtInsulationThicknessToInstall("100");
+			//Roof slope
 			td.clickDropDownRampantsTypes();
 			td.clickDropDownRampantsTypes();
 			td.clickDropDownAirLeaks();
@@ -113,19 +148,20 @@ public class TC_013_CreateWorkFile extends BaseClass{
 			td = new TcDashboard(driver);
 			td.clickTabAudit();
 			td.clickDropDownManufacturer();
-			td.clickSelectManufacturer();
+			//td.clickSelectManufacturer();
 			td.clickDropDownReference();
-			td.clickSelectReference();
+			//td.clickSelectReference();
 			Thread.sleep(2000);
-			//td.dispTxtAETotal();
+			td.dispTxtAETotal();
 			td.clickBtnAuditConfirm();
-			Thread.sleep(2000);
-			td.clickTabAudit1();
+			Thread.sleep(3000);
+			td.clickTabAudit();
+			Thread.sleep(3000);
 			//td.dispTxtAETotal();
 			Thread.sleep(2000);
-			td.clickBtnView();
+			//td.clickBtnView();
 			Thread.sleep(2000);
-			td.clickTxtAETotalAfterView();
+			//td.clickTxtAETotalAfterView();
 		}
 		
 }

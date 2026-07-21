@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -105,7 +106,7 @@ public class TcDashboard {
 	 private WebElement btnSaveLot;
 	 
 	 //Work file creation
-	 @FindBy(xpath = "//h6[contains(text(),'My Work Fi')]")
+	 @FindBy(xpath = "//span[contains(text(),'My Work Files')]")
 	 private WebElement sectionMyWorkFile;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Create a Works File')]")
@@ -114,7 +115,7 @@ public class TcDashboard {
 	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[2]")
 	 private WebElement dropdownSelectLead;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'(L/AN-10797) Priyanka1 Das')]")
+	 @FindBy(xpath = "//li[contains(text(),'(L/VC-10797) Priyanka1 Das')]")
 	 private WebElement selectLeadFromDropDown;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Next')]")
@@ -138,7 +139,7 @@ public class TcDashboard {
 	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput')])[4]")
 	 private WebElement dropdownSelectlot;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'LOT-DE985/AN-RES020/10861')]")
+	 @FindBy(xpath = "//li[contains(text(),'LOT-DE985/VC-RES020/10905')]")
 	 private WebElement selectLots;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Next')]")
@@ -157,25 +158,28 @@ public class TcDashboard {
 	 private WebElement btnConfirm;
 	 
 	 //Workfile>>Cust Appt
-	 @FindBy(xpath = "//span[contains(text(),'Customer Appointments')]")
+//	 @FindBy(xpath = "//span[contains(text(),'Customer Appointments')]")
+//	 private WebElement tabClientAppt;
+	 
+	 @FindBy(xpath = "(//div[@role='tabpanel']//span[normalize-space()='Customer Appointments'])[2]")
 	 private WebElement tabClientAppt;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Create a new appointment')]")
 	 private WebElement btnCreateAppt;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[3]")
+	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[2]")
 	 private WebElement dropDownApptType;
 	 
 	 @FindBy(xpath = "//li[contains(text(),'Previsit Appt.')]")
 	 private WebElement selectApptType;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[4]")
+	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[3]")
 	 private WebElement dropDownTypeOfPrevisit;
 	 
 	 @FindBy(xpath = "//li[contains(text(),'Presential')]")
 	 private WebElement selectTypeOfPrevisit;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[5]")
+	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[4]")
 	 private WebElement dropDownTechnicianName;
 	 
 	 @FindBy(xpath = "//li[contains(text(),'Mobile Testing')]")
@@ -202,85 +206,154 @@ public class TcDashboard {
 	 @FindBy(xpath = "//button[contains(text(),'Attic')]")
 	 private WebElement btnAttic;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[3]")
-	 private WebElement dropdownAtticType;
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[3]")
+//	 private WebElement dropdownAtticType;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'Lost')]")
+//	 private WebElement selectAtticType;
+//	 
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[4]")
+//	 private WebElement dropDownAccessType;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'Retractable Stairs')]")
+//	 private WebElement selectAccessType;
+//	 
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[5]")
+//	 private WebElement dropDownFloorType;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'Brick')]")
+//	 private WebElement selectFloorType;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]")
+//	 private WebElement txtFlooreThickness;
+//	 
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[6]")
+//	 private WebElement dropDownInsulationType;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'No Insulation')]")
+//	 private WebElement selectIsulationType;
+//	 
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[7]")
+//	 private WebElement dropDownVentilation;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'Natural Ventilation')]")
+//	 private WebElement selectVentilation;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]")
+//	 private WebElement txtAtticLength;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]")
+//	 private WebElement txtAtticWidth;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]")
+//	 private WebElement txtInternalRidgeHeight;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]")
+//	 private WebElement txtHalfSpan;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[6]")
+//	 private WebElement txtSurfaceToInsulate;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[7]")
+//	 private WebElement txtTotalSurface;
+//	 
+//	 @FindBy(xpath = "(//div[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[8]")
+//	 private WebElement dropDownRecommendedMaterial;
+//	 
+//	 @FindBy(xpath = "//li[contains(text(),'Blown mineral wool')]")
+//	 private WebElement selectRecommendedMaterial;
+//	 
+//	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[8]")
+//	 private WebElement txtReccomenedThickness;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'Lost')]")
+	 
+	 @FindBy(xpath = "//input[contains(@name,'atticWidth')]")
+	 private WebElement txtAtticWidthL;
+	 
+	 @FindBy(xpath = "(//input[contains(@name,'attic.atticHalfSpanHorizontal')])[1]")
+	 private WebElement txtAtticWidthL1;
+	 
+	 @FindBy(xpath = "(//input[contains(@name,'attic.atticHalfSpanHorizontal')])[2]")
+	 private WebElement txtAtticWidthL2;
+	 
+	 @FindBy(xpath = "(//input[contains(@name,'attic.atticHalfSpanHorizontal')])[3]")
+	 private WebElement txtAtticWidthL3;
+	 
+	 @FindBy(xpath = "(//input[contains(@name,'attic.h')])[1]")
+	 private WebElement txtH;
+	 
+	 @FindBy(xpath = "//input[contains(@name,'attic.h1')]")
+	 private WebElement txtH1;
+	 
+	 @FindBy(xpath = "//input[contains(@name,'attic.h2')]")
+	 private WebElement txtH2;
+	 
+	 @FindBy(xpath = "//select[contains(@name,'atticType')]")
 	 private WebElement selectAtticType;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[4]")
-	 private WebElement dropDownAccessType;
-	 
-	 @FindBy(xpath = "//li[contains(text(),'Retractable Stairs')]")
+	 @FindBy(xpath = "//select[contains(@name,'accessType')]")
 	 private WebElement selectAccessType;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[5]")
-	 private WebElement dropDownFloorType;
+	 @FindBy(xpath = "//button[contains(@type,'button') and contains(@class,'flex items-center gap-1 text-[10px] font-semibold text-bl')]")
+	 private WebElement BtnEditFloorType;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'Brick')]")
+	 @FindBy(xpath = "//select[contains(@class,'w-full px-3 py-2 text-sm border border-slate-200 rounded-lg')]")
 	 private WebElement selectFloorType;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]")
-	 private WebElement txtFlooreThickness;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[6]")
-	 private WebElement dropDownInsulationType;
+	 @FindBy(xpath = "//input[contains(@class,'w-full px-3 py-2 text-sm border border-slate-200')]")
+	 private WebElement txtFloorThickness;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'No Insulation')]")
-	 private WebElement selectIsulationType;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[7]")
-	 private WebElement dropDownVentilation;
+	 @FindBy(xpath = "//button[contains(text(),'Add Floor Type')]")
+	 private WebElement btnAddFloorType;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'Natural Ventilation')]")
-	 private WebElement selectVentilation;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]")
-	 private WebElement txtAtticLength;
+	 @FindBy(xpath = "//button[contains(@class,'p-1 rounded-lg hover:bg-blue-100 transition-colors')]")
+	 private WebElement btnCross;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]")
-	 private WebElement txtAtticWidth;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]")
-	 private WebElement txtInternalRidgeHeight;
+	 @FindBy(xpath = "//input[contains(@name,'attic.totalSurface')]")
+	 private WebElement txttotalSurface;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]")
-	 private WebElement txtHalfSpan;
+	 @FindBy(xpath = "//input[contains(@name,'attic.attic1')]")
+	 private WebElement txttotalSurface1;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[6]")
+	 @FindBy(xpath = "//input[contains(@name,'attic.attic2')]")
+	 private WebElement txttotalSurface2;
+	 
+	 @FindBy(xpath = "//input[contains(@name,'attic.surfaceToInsulate')]")
 	 private WebElement txtSurfaceToInsulate;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[7]")
-	 private WebElement txtTotalSurface;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[8]")
-	 private WebElement dropDownRecommendedMaterial;
+	 @FindBy(xpath = "//select[@name='attic.insulationType']")
+	 private WebElement selectInsulationType;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'Blown mineral wool')]")
-	 private WebElement selectRecommendedMaterial;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[8]")
-	 private WebElement txtReccomenedThickness;
+	 @FindBy(xpath = "//select[@name='attic.ventilation']")
+	 private WebElement selectVentilation;
 	 
+	 
+	 //material
+	 
+	 @FindBy(xpath = "//select[@name='attic.materialToInstall']")
+	 private WebElement selectMaterialToInstall;
+	 
+	 @FindBy(xpath = "//input[@name='attic.insulationThicknessToInstall']")
+	 private WebElement txtInsulationThicknessToInstall;
+
 	 
 	 //Roof slopes
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[9]")
-	 private WebElement dropDownRampantsTypes;
-	 
-	 @FindBy(xpath = "//li[contains(text(),'Red Brick')]")
+	 @FindBy(xpath = "//select[@name='roofSlopes.rampantsType']")
 	 private WebElement selectRampantsTypes;
+	
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[10]")
-	 private WebElement dropDownRoofType;
-	 
-	 @FindBy(xpath = "//li[contains(text(),'Four Slopes')]")
+	 @FindBy(xpath = "//select[@name='roofSlopes.roofType']")
 	 private WebElement selectRoofType;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[11]")
-	 private WebElement dropDownAirLeaks;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'Yes')]")
+	 @FindBy(xpath = "//select[@name='roofSlopes.imperfectionsAirLeaks']")
 	 private WebElement selectAirLeaks;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Next')]")
@@ -290,29 +363,25 @@ public class TcDashboard {
 	 @FindBy(xpath = "//span[contains(text(),'Audit')]")	
 	 private WebElement tabAudit;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[9]")	
+	 @FindBy(xpath = "//select[contains(@name,'calculation.manufacturer')]")	
 	 private WebElement dropDownManufacturer;
 	 
-	 @FindBy(xpath = "//li[contains(text(),'ISOVER')]")	
-	 private WebElement selectManufacturer;
 	 
-	 @FindBy(xpath = "(//div[contains(@class,'MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input')])[10]")	
+	 @FindBy(xpath = "//select[contains(@name,'calculation.reference')]")	
 	 private WebElement dropDownReference;	
 	 
-	 @FindBy(xpath = "//li[contains(text(),'ISOLENE4')]")	
-	 private WebElement selectReference;
 	 
 	 @FindBy(xpath = "//button[contains(text(),'Confirm')]")	
 	 private WebElement btnAuditConfirm;
 	 
-	 @FindBy(xpath = "(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input Mui-readOnly MuiInputBase-readOnly')])[1]")	
+	 @FindBy(xpath = "//input[contains(@class,'w-full px-3 py-2 border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-50 text-gray-500 cursor-not-allowed')]")	
 	 private WebElement txtAETotal; //getText
 	 
-	 @FindBy(xpath = "//button[contains(text(),'View')]")	
-	 private WebElement btnView;
-	 
-	 @FindBy(xpath = "(//h6[contains(@class,'MuiTypography-root MuiTypography-h6 css-13h6wm')])[6]")	
-	 private WebElement txtAETotalAfterView;  //getText
+//	 @FindBy(xpath = "//button[contains(text(),'View')]")	
+//	 private WebElement btnView;
+//	 
+//	 @FindBy(xpath = "(//h6[contains(@class,'MuiTypography-root MuiTypography-h6 css-13h6wm')])[6]")	
+//	 private WebElement txtAETotalAfterView;  //getText
 	 
 
 
@@ -534,8 +603,14 @@ public class TcDashboard {
 		 public void clickBtnNext1()
 		 {
 			 //btnNext1.click();
-			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			 js.executeScript("arguments[0].click();", btnNext1);
+//			 JavascriptExecutor js = (JavascriptExecutor) driver;
+//			 js.executeScript("arguments[0].click();", btnNext1);
+			 
+			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			 WebElement nextBtn = wait.until(
+			         ExpectedConditions.elementToBeClickable(btnNext1)
+			 );
+			 nextBtn.click();
 		 }
 		 
 
@@ -650,22 +725,34 @@ public class TcDashboard {
 
 		 public void clickTabClientAppt()
 		 {
-//			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//			    wait.until(ExpectedConditions.elementToBeClickable(tabClientAppt)).click();
 			 
 			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-			    for (int i = 0; i < 2; i++) {
-			        try {
-			            //wait.until(ExpectedConditions.elementToBeClickable(tabClientAppt)).click();
-			        	JavascriptExecutor js = (JavascriptExecutor) driver;
-						 js.executeScript("arguments[0].click();", tabClientAppt);
-			            
-			            break;
-			        } catch (StaleElementReferenceException e) {
-			            // retry
-			        }
-			    }
+			    wait.until(ExpectedConditions.elementToBeClickable(tabClientAppt));
+			 
+//			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//			 System.out.println("Clicking Customer Appointment Tab");
+//
+//
+//			    WebElement tab = wait.until(ExpectedConditions.visibilityOfElementLocated(
+//			            By.xpath("(//span[normalize-space()='Customer Appointments'])[1]")));
+//
+//			    JavascriptExecutor js = (JavascriptExecutor) driver;
+//			    js.executeScript("arguments[0].click();", tab);
+			    
+			 
+//			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//			    for (int i = 0; i < 2; i++) {
+//			        try {
+//			            //wait.until(ExpectedConditions.elementToBeClickable(tabClientAppt)).click();
+//			        	JavascriptExecutor js = (JavascriptExecutor) driver;
+//						 js.executeScript("arguments[0].click();", tabClientAppt);
+//			            
+//			            break;
+//			        } catch (StaleElementReferenceException e) {
+//			            // retry
+//			        }
+//			    }
 			    
 //			    JavascriptExecutor js = (JavascriptExecutor) driver;
 //				 js.executeScript("arguments[0].click();", tabClientAppt);
@@ -775,161 +862,302 @@ public class TcDashboard {
 		 }
 		 
 
-		 public void clickDropdownAtticType()
+//		 public void clickDropdownAtticType()
+//		 {
+//			 //dropdownAtticType.click();
+////			 WebElement refreshedElement = wait.until(ExpectedConditions.refreshed(
+////				        ExpectedConditions.elementToBeClickable(dropdownAtticType)));
+////				refreshedElement.click();
+//			 
+//			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//
+//			    for (int i = 0; i < 2; i++) {
+//			        try {
+//			            WebElement refreshedElement = wait.until(
+//			                    ExpectedConditions.elementToBeClickable(dropdownAtticType));
+//
+//			            refreshedElement.click();
+//			            break;  // exit loop if success
+//			        } 
+//			        catch (StaleElementReferenceException e) {
+//			            System.out.println("Stale element, retrying...");
+//			        }
+//			    }
+//		 }
+		 
+
+//		 public void clickSelectAtticType()
+//		 {
+//			 selectAtticType.click();
+//		 }
+//		 
+//
+//		 public void clickDropDownAccessType()
+//		 {
+//			 dropDownAccessType.click();
+//		 }
+//		 
+//
+//		 public void clickSelectAccessType()
+//		 {
+//			 selectAccessType.click();
+//		 }
+//		 
+//
+//		 public void clickDropDownFloorType()
+//		 {
+//			 dropDownFloorType.click();
+//		 }
+//		 
+//
+//		 public void clickSelectFloorType()
+//		 {
+//			 selectFloorType.click();
+//		 }
+//		 
+//
+//		 public void enterTxtFlooreThickness(String flooreThickness)
+//		 {
+//			 txtFlooreThickness.sendKeys(flooreThickness);
+//		 }
+//		 
+//
+//		 public void clickDropDownInsulationType()
+//		 {
+//			 dropDownInsulationType.click();
+//		 }
+//		 
+//
+//		 public void clickSelectIsulationType()
+//		 {
+//			 selectIsulationType.click();
+//		 }
+//		 
+//
+//		 public void clickDropDownVentilation()
+//		 {
+//			 dropDownVentilation.click();
+//		 }
+//		 
+//
+//		 public void clickSelectVentilation()
+//		 {
+//			 selectVentilation.click();
+//		 }
+//		 
+//
+//		 public void enterTxtAtticLength(String atticLength)
+//		 {
+//			 txtAtticLength.sendKeys(atticLength);
+//		 }
+//		 
+//
+//		 public void enterTxtAtticWidth(String atticWidth)
+//		 {
+//			 txtAtticWidth.sendKeys(atticWidth);
+//		 }
+//		 
+//
+//		 public void enterTxtInternalRidgeHeight(String internalRidgeHeight)
+//		 {
+//			 txtInternalRidgeHeight.sendKeys(internalRidgeHeight);
+//		 }
+//		 
+//
+//		 public void enterTxtHalfSpan(String halfSpan)
+//		 {
+//			 txtHalfSpan.sendKeys(halfSpan);
+//		 }
+//		 
+//
+//		 public void enterTxtSurfaceToInsulate(String surfaceToInsulate)
+//		 {
+//			 txtSurfaceToInsulate.sendKeys(surfaceToInsulate);
+//		 }
+//		 
+//
+//		 public void enterTxtTotalSurface(String totalSurface)
+//		 {
+//			 txtTotalSurface.sendKeys(totalSurface);
+//		 }
+//		 
+//
+//		 public void clickDropDownRecommendedMaterial()
+//		 {
+//			 dropDownRecommendedMaterial.click();
+//			 selectRecommendedMaterial.click();
+//		 }
+//		 
+//
+//		 public void enterTxtReccomenedThickness(String recommendationThickness)
+//		 {
+//			 txtReccomenedThickness.sendKeys(recommendationThickness);
+//		 }
+		 
+		 
+
+		 public void enterTxtAtticWidthL(String atticWidthL)
 		 {
-			 //dropdownAtticType.click();
-//			 WebElement refreshedElement = wait.until(ExpectedConditions.refreshed(
-//				        ExpectedConditions.elementToBeClickable(dropdownAtticType)));
-//				refreshedElement.click();
-			 
-			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+			 txtAtticWidthL.sendKeys(atticWidthL);		 }
+		 
 
-			    for (int i = 0; i < 2; i++) {
-			        try {
-			            WebElement refreshedElement = wait.until(
-			                    ExpectedConditions.elementToBeClickable(dropdownAtticType));
+		 public void enterTxtAtticWidthL1(String atticWidthL1)
+		 {
+			 txtAtticWidthL1.sendKeys(atticWidthL1);
 
-			            refreshedElement.click();
-			            break;  // exit loop if success
-			        } 
-			        catch (StaleElementReferenceException e) {
-			            System.out.println("Stale element, retrying...");
-			        }
-			    }
+		 }
+		 
+		 public void enterTxtAtticWidthL2(String atticWidthL2)
+		 {
+			 txtAtticWidthL2.sendKeys(atticWidthL2);
 		 }
 		 
 
-		 public void clickSelectAtticType()
+		 public void enterTxtAtticWidthL3(String atticWidthL3)
 		 {
-			 selectAtticType.click();
+			 txtAtticWidthL3.sendKeys(atticWidthL3);
+		 }
+
+		 public void enterTxtH(String H)
+		 {
+			 txtH.sendKeys(H);
+
+		 }
+		 
+
+		 public void enterTxtH1(String H1)
+		 {
+			 txtH1.sendKeys(H1);
+		 }
+		 
+
+		 public void enterTxtH2(String H2)
+		 {
+			 txtH2.sendKeys(H2);
+		 }
+		 
+		 public void clickDropDownAtticType()
+		 {
+			 
+			 Select atticType = new Select(selectAtticType);
+			 atticType.selectByVisibleText("Lost");
 		 }
 		 
 
 		 public void clickDropDownAccessType()
 		 {
-			 dropDownAccessType.click();
+			 Select accessType = new Select(selectAccessType);
+			 accessType.selectByVisibleText("Fixed Stairs");
 		 }
 		 
 
-		 public void clickSelectAccessType()
+		 public void clickBtnEditFloorType()
 		 {
-			 selectAccessType.click();
-		 }
-		 
+			 BtnEditFloorType.click();
 
-		 public void clickDropDownFloorType()
-		 {
-			 dropDownFloorType.click();
 		 }
 		 
 
 		 public void clickSelectFloorType()
 		 {
-			 selectFloorType.click();
+			 Select floorType = new Select(selectFloorType);
+			 floorType.selectByVisibleText("Plaster");
+		 }
+		 
+		 
+		 public void enterTxtFloorThickness(String floorthickness)
+		 {
+			 txtFloorThickness.sendKeys(floorthickness);
+		 }
+		 
+		 
+		 public void clickBtnAddFloorType()
+		 {
+			 btnAddFloorType.click();
+		 }
+		 
+		 
+		 public void clickBtnCross()
+		 {
+			 btnCross.click();
+		 }
+		 
+		 
+		 public void enterTxttotalSurface(String totalSurface)
+		 {
+			 txttotalSurface.sendKeys(totalSurface);
 		 }
 		 
 
-		 public void enterTxtFlooreThickness(String flooreThickness)
+		 public void enterTxttotalSurface1(String totalSurface1)
 		 {
-			 txtFlooreThickness.sendKeys(flooreThickness);
+			 txttotalSurface1.sendKeys(totalSurface1);
 		 }
 		 
 
-		 public void clickDropDownInsulationType()
+		 public void enterTxttotalSurface2(String totalSurface2)
 		 {
-			 dropDownInsulationType.click();
+			 txttotalSurface2.sendKeys(totalSurface2);
+		 }
+		 
+		 public void enterTxtSurfaceToInsulate(String SurfaceToInsulate)
+		 {
+			 txtSurfaceToInsulate.sendKeys(SurfaceToInsulate);
+		 }
+		 
+		 
+
+		 public void clickDropDownSelectInsulationType()
+		 {
+			 Select insulationType = new Select(selectInsulationType);
+			 insulationType.selectByVisibleText("No Insulation");
+		 }
+		 
+		 
+		 public void clickDropDownSelectVentilation()
+		 {
+			 Select Ventilation = new Select(selectVentilation);
+			 Ventilation.selectByVisibleText("Mechanical Ventilation");
+		 }
+		 
+		 
+		 //material
+		 
+		 public void clickDropDownSelectMaterialToInstall()
+		 {
+			 Select materialToInstall = new Select(selectMaterialToInstall);
+			 materialToInstall.selectByVisibleText("Blown mineral wool");
 		 }
 		 
 
-		 public void clickSelectIsulationType()
+		 public void enterTxtInsulationThicknessToInstall(String insulationThicknessToInstall)
 		 {
-			 selectIsulationType.click();
+			 txtInsulationThicknessToInstall.sendKeys(insulationThicknessToInstall);
 		 }
 		 
-
-		 public void clickDropDownVentilation()
-		 {
-			 dropDownVentilation.click();
-		 }
-		 
-
-		 public void clickSelectVentilation()
-		 {
-			 selectVentilation.click();
-		 }
-		 
-
-		 public void enterTxtAtticLength(String atticLength)
-		 {
-			 txtAtticLength.sendKeys(atticLength);
-		 }
-		 
-
-		 public void enterTxtAtticWidth(String atticWidth)
-		 {
-			 txtAtticWidth.sendKeys(atticWidth);
-		 }
-		 
-
-		 public void enterTxtInternalRidgeHeight(String internalRidgeHeight)
-		 {
-			 txtInternalRidgeHeight.sendKeys(internalRidgeHeight);
-		 }
-		 
-
-		 public void enterTxtHalfSpan(String halfSpan)
-		 {
-			 txtHalfSpan.sendKeys(halfSpan);
-		 }
-		 
-
-		 public void enterTxtSurfaceToInsulate(String surfaceToInsulate)
-		 {
-			 txtSurfaceToInsulate.sendKeys(surfaceToInsulate);
-		 }
-		 
-
-		 public void enterTxtTotalSurface(String totalSurface)
-		 {
-			 txtTotalSurface.sendKeys(totalSurface);
-		 }
-		 
-
-		 public void clickDropDownRecommendedMaterial()
-		 {
-			 dropDownRecommendedMaterial.click();
-			 selectRecommendedMaterial.click();
-		 }
-		 
-
-		 public void enterTxtReccomenedThickness(String recommendationThickness)
-		 {
-			 txtReccomenedThickness.sendKeys(recommendationThickness);
-		 }
 		 
 		 
 		 //WorkFile -> previst form -> Attic -> Roof slopes
 
 		 public void clickDropDownRampantsTypes()
 		 {
-			 dropDownRampantsTypes.click();
-			 selectRampantsTypes.click();
+			 Select rampantsTypes = new Select(selectRampantsTypes);
+			 rampantsTypes.selectByVisibleText("Wood");
 		 }
 		 
 
 		 public void clickDropDownRoofType()
 		 {
-			 dropDownRoofType.click();
-			 selectRoofType.click();
+			 Select roofType = new Select(selectRoofType);
+			 roofType.selectByVisibleText("Two Slopes");
 		 }
 		 
 
 		 public void clickDropDownAirLeaks()
 		 {
-			 dropDownAirLeaks.click();
-			 selectAirLeaks.click();
+			 Select airLeaks = new Select(selectAirLeaks);
+			 airLeaks.selectByVisibleText("YES");
 		 }
-		 
 
 		 public void clickBtnNextAttic()
 		 {
@@ -955,33 +1183,36 @@ public class TcDashboard {
 
 		 public void clickDropDownManufacturer()
 		 {
-			 dropDownManufacturer.click();
+			// dropDownManufacturer.click();
+			 Select manufacture = new Select(dropDownManufacturer);
+			 manufacture.selectByVisibleText("ISOVER");
 		 }
 		 
 
-		 public void clickSelectManufacturer()
-		 {
-			 //selectManufacturer.click();
-			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			 js.executeScript("arguments[0].click();", selectManufacturer);
-		 }
+//		 public void clickSelectManufacturer()
+//		 {
+//			 //selectManufacturer.click();
+//			 JavascriptExecutor js = (JavascriptExecutor) driver;
+//			 js.executeScript("arguments[0].click();", selectManufacturer);
+//		 }
 		 
 
 		 public void clickDropDownReference()
 		 {
-			 dropDownReference.click();
-			 
+			 //dropDownReference.click();
+			 Select refrence = new Select(dropDownReference);
+			 refrence.selectByVisibleText("ISOLENE4");
 			 
 		 }
 		 
 
-		 public void clickSelectReference() throws InterruptedException
-		 {
-			 //selectReference.click();
-			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			 js.executeScript("arguments[0].click();", selectReference);
-			 Thread.sleep(2000);
-		 }
+//		 public void clickSelectReference() throws InterruptedException
+//		 {
+//			 //selectReference.click();
+//			 JavascriptExecutor js = (JavascriptExecutor) driver;
+//			 js.executeScript("arguments[0].click();", selectReference);
+//			 Thread.sleep(2000);
+//		 }
 		 
 
 		 public void clickBtnAuditConfirm()
@@ -1001,15 +1232,22 @@ public class TcDashboard {
 
 		 public void dispTxtAETotal() throws InterruptedException
 		 {
-			 Thread.sleep(3000);
-			 String displayTextAETotal1=txtAETotal.getText();
+	
+			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+			 WebElement total = wait.until(ExpectedConditions.visibilityOf(txtAETotal));
+
+//			 String displayTextAETotal2 = txtAETotal.getAttribute("value");
+//			 System.out.println("AE Total: " + displayTextAETotal2);
+			 
+			 String displayTextAETotal1=total.getAttribute("value");// bcz here tag is input so need need to fetch input value not text
 			 System.out.println("AE total is: "+displayTextAETotal1);
 			 
 			 //SoftAssert sf = new SoftAssert();
-			 if(displayTextAETotal1.equalsIgnoreCase("24252"))
+			 if(displayTextAETotal1.equalsIgnoreCase("15007"))
 			 {
 				 sa.assertTrue(true, "Calculation passed");
-				 System.out.println("Calculation passed-24252 : "+displayTextAETotal1);
+				 System.out.println("Calculation passed-15007 : "+displayTextAETotal1);
 			 }
 			 else {
 				 sa.assertTrue(false, "Calculation failed");
@@ -1030,35 +1268,35 @@ public class TcDashboard {
 		 }
 		 
 
-		 public void clickBtnView()
-		 {
-			 //btnView.click();
-			 
-			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-			 WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(btnView));
-			 
-			 JavascriptExecutor js = (JavascriptExecutor) driver;
-			 js.executeScript("arguments[0].click();", btn);
-		 }
-		 
-
-		 public void clickTxtAETotalAfterView() throws InterruptedException
-		 {
-			 //btnCreateLot.click();
-			 Thread.sleep(3000);
-			 
-			 String displayTextAETotal1=txtAETotalAfterView.getText();
-			 System.out.println("AE total after view: "+displayTextAETotal1);
-			 
-			 //SoftAssert sf = new SoftAssert();
-			 if(displayTextAETotal1.equalsIgnoreCase("24252"))
-			 {
-				 sa.assertTrue(true, "Calculation passed");
-			 }
-			 else {
-				 sa.assertTrue(false, "Calculation failed");
-			 }
-		 }
+//		 public void clickBtnView()
+//		 {
+//			 //btnView.click();
+//			 
+//			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//
+//			 WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(btnView));
+//			 
+//			 JavascriptExecutor js = (JavascriptExecutor) driver;
+//			 js.executeScript("arguments[0].click();", btn);
+//		 }
+//		 
+//
+//		 public void clickTxtAETotalAfterView() throws InterruptedException
+//		 {
+//			 //btnCreateLot.click();
+//			 Thread.sleep(3000);
+//			 
+//			 String displayTextAETotal1=txtAETotalAfterView.getText();
+//			 System.out.println("AE total after view: "+displayTextAETotal1);
+//			 
+//			 //SoftAssert sf = new SoftAssert();
+//			 if(displayTextAETotal1.equalsIgnoreCase("15007"))
+//			 {
+//				 sa.assertTrue(true, "Calculation passed");
+//			 }
+//			 else {
+//				 sa.assertTrue(false, "Calculation failed");
+//			 }
+//		 }
 }
 
