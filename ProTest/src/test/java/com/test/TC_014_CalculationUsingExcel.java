@@ -19,6 +19,7 @@ public class TC_014_CalculationUsingExcel extends BaseClass{
 		{
 			bc = new BaseClass();
 			bc.LoginPage();
+			System.out.println("Testing");
 		}
 	
 	
@@ -80,7 +81,8 @@ public class TC_014_CalculationUsingExcel extends BaseClass{
 		        String totalSurface1,
 		        String totalSurface2,
 		        String surfaceToInsulate,
-		        String insulationThicknessToInstall) throws InterruptedException {
+		        String insulationThicknessToInstall,
+		        String finalResult) throws InterruptedException {
 		    
 		    td = new TcDashboard(driver);
 
@@ -141,7 +143,7 @@ public class TC_014_CalculationUsingExcel extends BaseClass{
 			td.clickDropDownReference();
 			//td.clickSelectReference();
 			Thread.sleep(2000);
-			td.dispTxtAETotal();
+			td.dispTxtAETotal1(finalResult);
 			td.clickBtnAuditConfirm();
 			Thread.sleep(3000);
 			td.clickTabAudit();

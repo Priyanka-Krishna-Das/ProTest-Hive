@@ -998,28 +998,46 @@ public class TcDashboard {
 
 		 public void enterTxtAtticWidthL(String atticWidthL)
 		 {
-			 txtAtticWidthL.sendKeys(atticWidthL);		 }
+			 
+//			 String existingValue = txtAtticWidthL.getAttribute("value");
+//
+//			    if (existingValue != null && !existingValue.trim().isEmpty()) {
+//			        txtAtticWidthL.clear();
+//			    }
+//
+//			    txtAtticWidthL.sendKeys(atticWidthL);
+			 
+			 txtAtticWidthL.clear();
+			 
+			 txtAtticWidthL.sendKeys(atticWidthL);	
+			 
+			 
+		 }
 		 
 
 		 public void enterTxtAtticWidthL1(String atticWidthL1)
 		 {
+			 txtAtticWidthL1.clear();
 			 txtAtticWidthL1.sendKeys(atticWidthL1);
 
 		 }
 		 
 		 public void enterTxtAtticWidthL2(String atticWidthL2)
 		 {
+			 txtAtticWidthL2.clear();
 			 txtAtticWidthL2.sendKeys(atticWidthL2);
 		 }
 		 
 
 		 public void enterTxtAtticWidthL3(String atticWidthL3)
 		 {
+			 txtAtticWidthL3.clear();
 			 txtAtticWidthL3.sendKeys(atticWidthL3);
 		 }
 
 		 public void enterTxtH(String H)
 		 {
+			 txtH.clear();
 			 txtH.sendKeys(H);
 
 		 }
@@ -1027,12 +1045,14 @@ public class TcDashboard {
 
 		 public void enterTxtH1(String H1)
 		 {
+			 txtH1.clear();
 			 txtH1.sendKeys(H1);
 		 }
 		 
 
 		 public void enterTxtH2(String H2)
 		 {
+			 txtH2.clear();
 			 txtH2.sendKeys(H2);
 		 }
 		 
@@ -1067,6 +1087,7 @@ public class TcDashboard {
 		 
 		 public void enterTxtFloorThickness(String floorthickness)
 		 {
+			 txtFloorThickness.clear();
 			 txtFloorThickness.sendKeys(floorthickness);
 		 }
 		 
@@ -1085,23 +1106,27 @@ public class TcDashboard {
 		 
 		 public void enterTxttotalSurface(String totalSurface)
 		 {
+			 txttotalSurface.clear();
 			 txttotalSurface.sendKeys(totalSurface);
 		 }
 		 
 
 		 public void enterTxttotalSurface1(String totalSurface1)
 		 {
+			 txttotalSurface1.clear();
 			 txttotalSurface1.sendKeys(totalSurface1);
 		 }
 		 
 
 		 public void enterTxttotalSurface2(String totalSurface2)
 		 {
+			 txttotalSurface2.clear();
 			 txttotalSurface2.sendKeys(totalSurface2);
 		 }
 		 
 		 public void enterTxtSurfaceToInsulate(String SurfaceToInsulate)
 		 {
+			 txtSurfaceToInsulate.clear();
 			 txtSurfaceToInsulate.sendKeys(SurfaceToInsulate);
 		 }
 		 
@@ -1132,6 +1157,7 @@ public class TcDashboard {
 
 		 public void enterTxtInsulationThicknessToInstall(String insulationThicknessToInstall)
 		 {
+			 txtInsulationThicknessToInstall.clear();
 			 txtInsulationThicknessToInstall.sendKeys(insulationThicknessToInstall);
 		 }
 		 
@@ -1265,6 +1291,21 @@ public class TcDashboard {
 //			    System.out.println("AE total is: " + displayTextAETotal1);
 //
 //			    Assert.assertEquals(displayTextAETotal1, "24252", "Calculation failed");
+		 }
+		 
+		 public void dispTxtAETotal1(String expectedResult)
+		 {
+		     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		     WebElement total = wait.until(ExpectedConditions.visibilityOf(txtAETotal));
+
+		     String actualResult = total.getAttribute("value");
+
+		     System.out.println("Expected : " + expectedResult);
+		     System.out.println("Actual   : " + actualResult);
+
+		     Assert.assertEquals(actualResult, expectedResult,
+		             "AE Total calculation mismatch");
 		 }
 		 
 

@@ -42,6 +42,7 @@ public class ExcelReaderUsingLoopCalculation {
                 String totalSurface2 = formatter.formatCellValue(row.getCell(10));
                 String surfaceToInsulate = formatter.formatCellValue(row.getCell(11));
                 String insulationThicknessToInstall = formatter.formatCellValue(row.getCell(12));
+                String finalResult = formatter.formatCellValue(row.getCell(13));
 
                 data.add(new Object[] {
                         atticWidthL,
@@ -56,7 +57,8 @@ public class ExcelReaderUsingLoopCalculation {
                         totalSurface1,
                         totalSurface2,
                         surfaceToInsulate,
-                        insulationThicknessToInstall
+                        insulationThicknessToInstall,
+                        finalResult
                 });
             }
 

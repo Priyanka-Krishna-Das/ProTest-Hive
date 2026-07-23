@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="2" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-21T13:33:06 IST" name="Suite" finished-at="2026-07-21T13:34:32 IST" duration-ms="85295">
+  <suite started-at="2026-07-23T14:21:21 IST" name="Suite" finished-at="2026-07-23T14:23:17 IST" duration-ms="116578">
     <groups>
     </groups>
-    <test started-at="2026-07-21T13:33:06 IST" name="Test" finished-at="2026-07-21T13:34:32 IST" duration-ms="85295">
+    <test started-at="2026-07-23T14:21:21 IST" name="Test" finished-at="2026-07-23T14:23:17 IST" duration-ms="116578">
       <class name="com.test.TC_014_CalculationUsingExcel">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:06 IST" name="setUp" finished-at="2026-07-21T13:33:09 IST" duration-ms="2982" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:21:21 IST" name="setUp" finished-at="2026-07-23T14:21:26 IST" duration-ms="5521" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:1, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:09 IST" name="login" finished-at="2026-07-21T13:33:12 IST" duration-ms="2771" status="PASS">
+        <test-method signature="login()[pri:1, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:21:26 IST" name="login" finished-at="2026-07-23T14:21:29 IST" duration-ms="3130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createWorkfile()[pri:2, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:12 IST" name="createWorkfile" finished-at="2026-07-21T13:33:37 IST" duration-ms="24395" status="PASS">
+        <test-method signature="createWorkfile()[pri:2, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:21:29 IST" name="createWorkfile" finished-at="2026-07-23T14:22:05 IST" duration-ms="35205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createWorkfile -->
-        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:33:38 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:02 IST" duration-ms="23193" status="PASS">
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:22:08 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-23T14:22:35 IST" duration-ms="27870" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[8.9]]>
+                <![CDATA[158]]>
               </value>
             </param>
             <param index="8">
@@ -93,11 +93,60 @@
                 <![CDATA[100]]>
               </value>
             </param>
+            <param index="13">
+              <value>
+                <![CDATA[15007]]>
+              </value>
+            </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[AE Total calculation mismatch expected [15007] but found [12987]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: AE Total calculation mismatch expected [15007] but found [12987]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.pom.TcDashboard.dispTxtAETotal1(TcDashboard.java:1307)
+at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:145)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeWorkFlow -->
-        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:34:02 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:13 IST" duration-ms="11792" status="FAIL">
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:22:35 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-23T14:22:59 IST" duration-ms="23291" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -164,6 +213,11 @@
                 <![CDATA[100]]>
               </value>
             </param>
+            <param index="13">
+              <value>
+                <![CDATA[12217]]>
+              </value>
+            </param>
           </params>
           <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
@@ -173,10 +227,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cde4b86f73c371b0f2e9276eb9bc1286, sendKeysToElement {value=[Ljava.lang.CharSequence;@580902cd, id=f.A57A1BF2D3F13DB59CDFE29C26CDD495.d.FDCB668F5B6CE11C522AF0040C7E09F3.e.1108}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cde4b86f73c371b0f2e9276eb9bc1286)] -> xpath: (//input[contains(@name,'attic.atticHalfSpanHorizontal')])[1]]
-Session ID: cde4b86f73c371b0f2e9276eb9bc1286]]>
+Command: [9516b3015bbf85b045743eccdacdd57d, clearElement {id=f.8F668B20B250BA4DB5CE0930FF7BABC3.d.1FAA8F33E0DD2BD4A8E9799A7ACC4C91.e.1208}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51843}, goog:processID: 19476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51843/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9516b3015bbf85b045743eccdacdd57d)] -> xpath: //input[contains(@name,'atticWidth')]]
+Session ID: 9516b3015bbf85b045743eccdacdd57d]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
@@ -185,10 +239,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cde4b86f73c371b0f2e9276eb9bc1286, sendKeysToElement {value=[Ljava.lang.CharSequence;@580902cd, id=f.A57A1BF2D3F13DB59CDFE29C26CDD495.d.FDCB668F5B6CE11C522AF0040C7E09F3.e.1108}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cde4b86f73c371b0f2e9276eb9bc1286)] -> xpath: (//input[contains(@name,'attic.atticHalfSpanHorizontal')])[1]]
-Session ID: cde4b86f73c371b0f2e9276eb9bc1286
+Command: [9516b3015bbf85b045743eccdacdd57d, clearElement {id=f.8F668B20B250BA4DB5CE0930FF7BABC3.d.1FAA8F33E0DD2BD4A8E9799A7ACC4C91.e.1208}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51843}, goog:processID: 19476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51843/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9516b3015bbf85b045743eccdacdd57d)] -> xpath: //input[contains(@name,'atticWidth')]]
+Session ID: 9516b3015bbf85b045743eccdacdd57d
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -202,13 +256,14 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-at com.pom.TcDashboard.enterTxtAtticWidthL1(TcDashboard.java:1006)
+at jdk.proxy2/jdk.proxy2.$Proxy12.clear(Unknown Source)
+at com.pom.TcDashboard.enterTxtAtticWidthL(TcDashboard.java:1010)
 at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:109)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -244,7 +299,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeWorkFlow -->
-        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-21T13:34:13 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-21T13:34:32 IST" duration-ms="18228" status="FAIL">
+        <test-method signature="completeWorkFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.test.TC_014_CalculationUsingExcel@158a8276]" started-at="2026-07-23T14:22:59 IST" name="completeWorkFlow" data-provider="calculation" finished-at="2026-07-23T14:23:17 IST" duration-ms="18290" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -311,6 +366,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
                 <![CDATA[110]]>
               </value>
             </param>
+            <param index="13">
+              <value>
+                <![CDATA[5195]]>
+              </value>
+            </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -320,9 +380,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cde4b86f73c371b0f2e9276eb9bc1286, findElement {using=xpath, value=//button[contains(text(),'Start Previsit')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cde4b86f73c371b0f2e9276eb9bc1286]]>
+Command: [9516b3015bbf85b045743eccdacdd57d, findElement {value=//button[contains(text(),'Start Previsit')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51843}, goog:processID: 19476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51843/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9516b3015bbf85b045743eccdacdd57d]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Start Previsit')]"}
@@ -331,9 +391,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.35.0', revision: '1c58e5028b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cde4b86f73c371b0f2e9276eb9bc1286, findElement {using=xpath, value=//button[contains(text(),'Start Previsit')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52140}, goog:processID: 5872, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52140/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cde4b86f73c371b0f2e9276eb9bc1286
+Command: [9516b3015bbf85b045743eccdacdd57d, findElement {value=//button[contains(text(),'Start Previsit')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.127, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\PRIYAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51843}, goog:processID: 19476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51843/devtoo..., se:cdpVersion: 150.0.7871.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9516b3015bbf85b045743eccdacdd57d
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -354,7 +414,7 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
 at com.pom.TcDashboard.clickBtnStartPrevisit(TcDashboard.java:853)
-at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:106)
+at com.test.TC_014_CalculationUsingExcel.completeWorkFlow(TC_014_CalculationUsingExcel.java:107)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

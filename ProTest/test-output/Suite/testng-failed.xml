@@ -6,7 +6,7 @@
     <classes>
       <class name="com.test.TC_014_CalculationUsingExcel">
         <methods>
-          <include name="completeWorkFlow" invocation-numbers="1 2"/>
+          <include name="completeWorkFlow" invocation-numbers="0 1 2"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.test.TC_014_CalculationUsingExcel -->
